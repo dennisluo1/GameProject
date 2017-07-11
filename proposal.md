@@ -4,7 +4,7 @@
 
 ## What is Superman Vs Kryponite?
 
-> Brief discussion of what the game is and why you chose to make it
+Superman Vs Kryponite is a game similar to Flappy Bird. However this is a game where Superman must fly through a obstacle course where he must avoid kryponite which is his biggest weakness. The game is simply played with the user pressing down on the spacebar to keep Superman afloat.
 
 ## Technical Discussion
 
