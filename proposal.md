@@ -1,8 +1,8 @@
-# [Name of Game]
+# Superman Vs Kryponite
 
 [screenshot]
 
-## What is [name of game]?
+## What is Superman Vs Kryponite?
 
 > Brief discussion of what the game is and why you chose to make it
 
