@@ -42,6 +42,6 @@ Some challenges that I will be facing are: designing the overall concept of the 
 
 ## Links and Resources
 
-https://www.youtube.com/watch?v=cXgA1d_E-jY&t=3s
-http://www.lessmilk.com/tutorial/flappy-bird-phaser-1
+* https://www.youtube.com/watch?v=cXgA1d_E-jY&t=3s
+* http://www.lessmilk.com/tutorial/flappy-bird-phaser-1
 
