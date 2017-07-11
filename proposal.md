@@ -8,8 +8,8 @@ Superman Vs Kryponite is a game similar to Flappy Bird. However this is a game w
 
 ## Wireframe
 
-![](./images/wireframe1.jpg)
-![](./images/wireframe2.jpg)
+![](./Wireframes/wireframe1.jpg)
+![](./Wireframes/wireframe2.jpg)
 
 ## Initial thoughts on game structure
 
