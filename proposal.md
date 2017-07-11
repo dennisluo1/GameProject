@@ -17,27 +17,27 @@ Some challenges that I will face are: designing the overall concept of the game.
 
 ## Phases of Completion
 
-Phase -1: 
+### Phase -1: 
 * Wireframing: design the layout of the game
-Phase -2:
+### Phase -2:
 * Create the HTML, CSS, and JavaScript files and link them together 
 * Gather all neccessary images and all other resources for this project
-Phase 0: 
+### Phase 0: 
 * Create the Div structure for the game. There should be a main div container that will contain all the items.
 * Style the CSS 
-Phase 1: 
+### Phase 1: 
 * JavaScript: Create the superman element. 
 * Superman box should bounce up when user presses down on the spacebar. 
-Phase 2: 
+### Phase 2: 
 * Create two columns
 * Figure out how to randomize the two columns 
-Phase 3: 
+### Phase 3: 
 * Incorporate collision detection so that when Superman crashes into column (kryptonie), the game ends
 * Figure out how to get the columns to move to the left so that it appears Superman is flying to the right
-Phase 4: 
+### Phase 4: 
 * Figure out how to incorporate score element to the game
 * The score should start from 0 and count up until Superman crashes into the column
-Phase 5:
+### Phase 5:
 * Create a reset button 
 
 ## Links and Resources
