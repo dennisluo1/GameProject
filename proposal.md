@@ -6,7 +6,7 @@
 
 Superman Vs Kryponite is a game similar to Flappy Bird. However this is a game where Superman must fly through a obstacle course where he must avoid kryponite (his weakness). The longer Superman can survive through the obstacle course, the more points the user will score. This game is simply played with the user pressing down on the spacebar to keep Superman afloat. My inspiration of this game stems from my favorite childhood television show, "Smallville." Smallville is an American tv series that lasted for 10 seasons and tells the story of Clark Kent, also known as Superman.
 
-## Wireframe
+## Wireframes
 
 ![](./Wireframes/wireframe1.jpg)
 ![](./Wireframes/wireframe2.jpg)
