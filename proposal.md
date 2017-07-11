@@ -13,7 +13,7 @@ Superman Vs Kryponite is a game similar to Flappy Bird. However this is a game w
 
 ## Initial thoughts on game structure
 
-Some challenges that I will face are: designing the overall concept of the game. What will be a challenge is getting superman to maintain afloat when the user presses down on the spacebar. In addition I have to figure out how to get the two column bars to randomize. 
+Some challenges that I will be facing are: designing the overall concept of the game. What will be a challenge is getting superman to maintain afloat when the user presses down on the spacebar. In addition I have to figure out how to get the two column bars to randomize. 
 
 ## Phases of Completion
 
