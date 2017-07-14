@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Superman Vs Kryptonite</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./CSS/style.css">
 </head>
 <body>
@@ -19,19 +20,18 @@
         <div class="column" id="column-one"></div> 
         <div class="column" id="column-two"></div>
     </div>
-
     <!--Should display the score of the game -->
-    <!--<div class="score"></div>-->
     </br>
     <!--This shows the score-->
     <div class="score">
-        <p><b>Score: <span class="the-score">0</span></p>
+        <p>Score: <span id="the-score">0</span></p>
+        <p>Speed: <span id="the-speed">10</span></p>
     </div>
     <!--Reset button-->
     <button class="reset">Reset</button>
 
-    <script src="main.js"></script>
-    <script src="jquery.js"></script>
+    <script src="./JavaScript/main.js"></script>
+    <script src="./JavaScript/jquery.js"></script>
 </body>
 <!--<footer>© Dennis Luo</footer>-->
 </html>
