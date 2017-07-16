@@ -1,3 +1,4 @@
+// Understanding logic of flappy bird: https://www.youtube.com/watch?v=cXgA1d_E-jY&t=3s
 $(function () {
     // Give names to class and id to use for dom manipulation/jQuery
     var container = $('.container');
@@ -14,6 +15,7 @@ $(function () {
     var columnCurrentPosition = parseInt(column.css('right'));
     var columnCurrentHeight = parseInt(column.css('height'));
     var supermanLeft = parseInt(superman.css('left'));
+    var supermanRight = parseInt(superman.css('right'));
     var supermanHeight = parseInt(superman.height());
     var currentSpeed = 10;
 
@@ -27,8 +29,14 @@ $(function () {
             // Once collision is detected, end the game 
             endGame();
         } else {
-        //Create variable to take value of c  olumnCurrentPosition
+        //Create variable to take value of columnCurrentPosition 
         var columnCurrent = parseInt(column.css('right'));
+
+        //Update score 
+        if(supermanRight < columnCurrent) {
+            // columnCurrent > containerWidth - supermanLeft
+            score.text(parseInt(score.text()) + 1)
+        }
         //Create if statement, once columns leave, need to return
         // update the scores
         if(columnCurrent > containerWidth ) {
@@ -44,7 +52,7 @@ $(function () {
             // Column returns if it leaves container
             columnCurrent = columnCurrentPosition;
         }
-        // Set Interval to 50 milliseconds
+        // Set Interval to 45 milliseconds
         // Set CSS property to move right to left
         column.css('right', columnCurrent + currentSpeed);
         // Set fallUp to false to run fallDown function
@@ -52,67 +60,75 @@ $(function () {
             fallDown(); // move down if statement is false
         }
         }
-    }, 50);
+    }, 45);
+// fallDown function, superman needs to be constantly falling down
+function fallDown() {
+    superman.css('top', parseInt(superman.css('top')) + 7);
+}
+// Referenced keyup/keydown from: https://codepen.io/JTParrett/pen/zwhy
+// Code to move Superman
+setInterval(flyingHero, 10);
+var sky = {} 
+var forward = 10;
 
+$(window).keydown(function(event) {
+    sky[event.keyCode] = true;
+});
+
+$(window).keyup(function(event) {
+    delete sky[event.keyCode];
+});
+// Up, down, left, right keys
+function flyingHero() {
+    for (var direction in sky) {
+        if (direction == 37){ // left arrow
+            $(".superman").animate({left: "-=5"}, 0);            
+        }
+        if (direction == 38) { // up arrow
+            $(".superman").animate({top: "-=5"}, 0); 
+        }        
+
+        if (direction == 39) { // right arrow
+            $(".superman").animate({left: "+=5"}, 0); 
+        }
+        if (direction == 40) { // down arrow
+            $(".superman").animate({top: "+=5"}, 0);
+        }
+    }
+}
 //End the game once collision is detected
 function endGame() {
     clearInterval(beginGame);
-    reset.slideDown();
+    alert("Game Over! Play again?");
 }
-
-
-// fallDown function 
-function fallDown() {
-    superman.css('top', parseInt(superman.css('top')) + 7)
-}
-
-
-// Use spacebar as key to play game,
-// Space keycode is 32, moveUp equals false, move up, setInterval 40 miliseconds
-$(document).on('keydown', function(space) {
-    var spacebar = space.keyCode;
-    if(spacebar === 32 && fallUp === false) {
-        fallUp = setInterval(moveUp, 45);
-    }
-});
-
-
-// moveUp will decrease top to botoom by - 7
-function moveUp() {
-    superman.css('top', parseInt(superman.css('top')) - 7);
-} 
-// Once key is lifted 
-$(document).on('keyup', function(space) {
-    var spacebar = space.keyCode;
-    if(spacebar === 32) {
-        //Clear the interval so superman can fall back down
-        clearInterval(fallUp);
-        fallUp = false;
-    }
-});
-
 
 // Collision Detector
+// Referenced collision detector from: https://www.youtube.com/watch?v=Wrzr-QBVNNM&t=2393s
 // Top column, bottom column, top of container, bottom of container
-function collisionDetector($one, $two) {
+function collisionDetector($clark, $lex) {
     // use offset to target top and left properties
-    var a = $one.offset().left; 
-    var b = $one.offset().top;
-    var c = $two.offset().left;
-    var d = $two.offset().top;    
+    var a = $clark.offset().left; 
+    var b = $clark.offset().top;
+    var c = $lex.offset().left;
+    var d = $lex.offset().top;    
     // use outHeight to target heights of element such as top and bottom padding
-    var heightOne = $one.outerHeight(true); 
-    var heightTwo = $two.outerHeight(true);
-    var widthOne = $one.outerWidth(true);
-    var widthTwo = $two.outerWidth(true); 
+    var heightOne = $clark.outerHeight(true);  
+    var heightTwo = $lex.outerHeight(true);
+    var widthOne = $clark.outerWidth(true);
+    var widthTwo = $lex.outerWidth(true); 
     // Four types of possible combinations of collision    
     var combineOne = b + heightOne;
     var combineTwo = a + widthOne;
     var combineThree = d + heightTwo;
     var combineFour = c + widthTwo;
-    // if statement
-    if(combineOne < d || combineTwo < c || combineThree < b || combineFour < a) return false;
+    // if statements
+    if(combineOne < d || combineTwo < c || combineThree < b || combineFour < a) return false     ;
     return true;
-}
+} 
 });
 // Reset with message and stop game permanently 
+// Sources: 
+// https://www.youtube.com/watch?v=cXgA1d_E-jY&t=3s
+// https://www.youtube.com/watch?v=Wrzr-QBVNNM&t=2393s
+// https://codepen.io/JTParrett/pen/zwhyI
+
