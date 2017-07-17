@@ -1,6 +1,7 @@
 # Superman Vs Kryptonite
 
-[screenshot]
+![](./Images/screenshot1.png)
+![](./Images/screenshot2.png)
 
 ## What is Superman Vs Kryptonite?
 
