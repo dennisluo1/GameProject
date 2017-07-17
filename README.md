@@ -18,7 +18,6 @@ As a young teenager, my favorite show was, "Smallville." Smallville is a ten sea
 
 ### Notes on Game Structure
 
-> Code samples, description of challenges you overcame, etc.
 ```
 setInterval(flyingHero, 10);
 var sky = {} 
